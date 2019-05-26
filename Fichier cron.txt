@@ -1,0 +1,13 @@
+
+
+apt-get install rsync
+
+#!/bin/bash
+
+rsync -a /var/www /home/backup/
+
+# m h  dom mon dow   command
+0 12   *        *    3  /usr/bin/backup.sh
+
+/etc/init.d/cron restart
+
